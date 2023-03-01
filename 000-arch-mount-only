@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mount -o noatime,space_cache=v2,compress=zstd,ssd,discard=async /dev/nvme0n1p2 /mnt
+mkdir /mnt/boot
+mkdir /mnt/home
+mount /dev/nvme0n1p1 /mnt/boot
+swapon /dev/nvme0n1p3
+mount -o noatime,space_cache=v2,compress=zstd,ssd,discard=async /dev/nvme0n1p4 /mnt/home
