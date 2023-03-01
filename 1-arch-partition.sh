@@ -17,10 +17,10 @@ cd /mnt/boot/EFI
 rm -rv !("Boot"|"Microsoft")
 cd
 
-pacstrap -K /mnt base linux linux-firmware
+pacstrap -K /mnt base linux linux-firmware nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-cp ../archlinux-install /mnt
+cp -r ../archlinux-install /mnt
 
 arch-chroot /mnt
