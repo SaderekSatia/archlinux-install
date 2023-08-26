@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkfs.btrfs -L Root -f /dev/nvme0n1p2
-mkfs.btrfs -L Home -f /dev/nvme0n1p4
+# mkfs.btrfs -L Home -f /dev/nvme0n1p4
 
 mount -o noatime,space_cache=v2,compress=zstd,ssd,discard=async /dev/nvme0n1p2 /mnt
 mkdir /mnt/boot
@@ -17,7 +17,7 @@ cd /mnt/boot/EFI
 rm -rv !("Boot"|"Microsoft")
 cd
 
-pacstrap -K /mnt base linux linux-firmware nano
+pacstrap -K /mnt base linux-zen linux-zen-firmware nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
