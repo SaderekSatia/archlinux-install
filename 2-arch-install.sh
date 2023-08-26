@@ -45,7 +45,7 @@ usermod -aG libvirt sadereksatia
 printf "\e[1;32mMasukan Kata Sandi USER\e[0m\n"
 passwd sadereksatia
 
-nano /e 
+nano /etc/sudoers
 
 # Ganti menggunakan whell >> echo "sadereksatia ALL=(ALL) ALL" >> /etc/sudoers.d/sadereksatia
 
