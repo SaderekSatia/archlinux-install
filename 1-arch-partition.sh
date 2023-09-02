@@ -1,5 +1,7 @@
 #!/bin/bash
 
+timedatectl
+
 mkfs.btrfs -L Root -f /dev/nvme0n1p2
 # mkfs.btrfs -L Home -f /dev/nvme0n1p4
 
@@ -17,7 +19,7 @@ cd /mnt/boot/EFI
 rm -rv !("Boot"|"Microsoft")
 cd
 
-pacstrap -K /mnt base linux-zen linux-zen-firmware nano
+pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware sof-firmware nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
