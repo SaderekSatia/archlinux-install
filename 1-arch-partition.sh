@@ -19,7 +19,7 @@ cd /mnt/boot/EFI
 rm -rv !("Boot"|"Microsoft")
 cd
 
-pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware sof-firmware nano
+pacstrap -K /mnt base linux-zen linux-zen-headers linux-zen-docs linux-firmware sof-firmware nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
