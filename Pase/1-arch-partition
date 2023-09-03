@@ -1,0 +1,34 @@
+Pase-1.1-Konfigurasi_Partisi() {
+	mkfs.btrfs -L Root -f /dev/nvme0n1p2
+	# mkfs.btrfs -L Home -f /dev/nvme0n1p4
+
+	mount -o noatime,space_cache=v2,compress=zstd,ssd,discard=async /dev/nvme0n1p2 /mnt
+	mkdir /mnt/boot
+	mkdir /mnt/home
+	mount /dev/nvme0n1p1 /mnt/boot
+	swapon /dev/nvme0n1p3
+	mount -o noatime,space_cache=v2,compress=zstd,ssd,discard=async /dev/nvme0n1p4 /mnt/home
+}
+
+Pase-1.2-Reset_Bootloader() {
+	shopt -s extglob
+	cd /mnt/boot
+	rm -rv !("EFI")
+	cd /mnt/boot/EFI
+	rm -rv !("Boot"|"Microsoft")
+	cd
+}
+
+Pase-1.3-Pemasangan_Inti() {
+	timedatectl
+	pacstrap -K /mnt base linux-zen linux-zen-headers linux-zen-docs linux-firmware sof-firmware alsa-firmware virt-firmware amd-ucode nano
+
+	genfstab -U /mnt >> /mnt/etc/fstab
+
+	cp -r ../archlinux-install /mnt
+
+	/bin/echo -e "\e[1;32mMemasuki ARCH-CHROOT Dalam 5..4..3..2..1..\e[0m"
+	sleep 5
+
+	arch-chroot /mnt
+}

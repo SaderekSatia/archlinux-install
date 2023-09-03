@@ -1,0 +1,25 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+submenu "System Maintenance" {
+	menuentry "Archlinux Bootable" --class arch --class gnu-linux --class gnu --class os {
+		set isofile="/archlinux-x86_64.iso"
+		search --no-floppy -f --set=root $isofile
+		probe -u $root --set=uuid
+		set imgdevpath="/dev/disk/by-uuid/$uuid"
+		loopback loop $isofile
+		linux (loop)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile earlymodules=loop
+		initrd (loop)/arch/boot/intel-ucode.img (loop)/arch/boot/amd-ucode.img (loop)/arch/boot/x86_64/initramfs-linux.img
+	}
+
+	menuentry "Windows Bootable" --class windows --class os {
+		set root=(hd0,9)
+		insmod part_gpt
+		insmod ntfs
+		insmod chain
+		chainloader /efi/boot/bootx64.efi
+	}
+}
