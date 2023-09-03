@@ -1,0 +1,13 @@
+#!/bin/bash
+
+timedatectl
+pacstrap -K /mnt base linux-zen linux-zen-headers linux-zen-docs linux-firmware sof-firmware alsa-firmware virt-firmware amd-ucode nano
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+cp -r ../archlinux-install /mnt
+
+/bin/echo -e "\e[1;32mMemasuki ARCH-CHROOT Dalam 5..4..3..2..1..\e[0m"
+sleep 5
+
+arch-chroot /mnt

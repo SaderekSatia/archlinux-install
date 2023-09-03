@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-audio pipewire-media-session pipewire-jack noise-suppression-for-voice

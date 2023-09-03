@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pacman -S cpupower
+systemctl enable cpupower
+yay -S zenpower3-dkms
+yay -S asusctl
+systemctl enable asusd
+yay -S lact
+systemctl enable lactd
+yay -S cpupower-gui
+yay -S otpclient
