@@ -1,8 +1,0 @@
-#!/bin/bash
-
-#shopt -s extglob
-#cd /mnt/boot
-#rm -rv !("EFI")
-#cd /mnt/boot/EFI
-#rm -rv !("Boot"|"Microsoft")
-#cd
