@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo pacman -S $(pacman -Ss ttf- | sed -e's/\s.*//')
+sudo pacman -S $(pacman -Ss otf- | sed -e's/\s.*//')

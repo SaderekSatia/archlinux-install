@@ -1,0 +1,9 @@
+#!/bin/bash
+
+/bin/echo -e "\e[1;32m-------------= Sekedar Saran =-------------\e[0m\n"
+sleep 1
+/bin/echo -e "\e[1;32mCopy Semua Config Ke Sistem Sekarang\e[0m\n"
+sleep 1
+/bin/echo -e "\e[1;32m>> cp -r Config/etc/* /etc/\e[0m\n"
+/bin/echo -e "\e[1;32mSaya Harapkan Satu Persatu\e[0m\n"
+/bin/echo -e "\e[1;32m>> cp -r Config/usr/lib/modprobe.d/* /usr/lib/modprobe.d/\e[0m\n"

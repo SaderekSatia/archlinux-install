@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkfs.fat -n BOOT -F 32 /dev/nvme0n1p1
+mkfs.btrfs -L Root -f /dev/nvme0n1p2
+mkfs.btrfs -L Var -f /dev/nvme0n1p3
+mkswap -L Swap /dev/nvme0n1p4
+# mkfs.btrfs -L Home -f /dev/nvme0n1p5
+
+mount -o compress=zstd:1 /dev/nvme0n1p2 /mnt
+mkdir /mnt/boot
+mkdir /mnt/home
+mkdir /mnt/var
+mount /dev/nvme0n1p1 /mnt/boot
+mount -o compress=zstd:1 /dev/nvme0n1p3 /mnt/var
+mount /dev/nvme0n1p5 /mnt/home
+swapon /dev/nvme0n1p4

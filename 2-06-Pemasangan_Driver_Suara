@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#pipewire-media-session <-- Jelek diganti wireplumber
+pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-audio pipewire-jack wireplumber noise-suppression-for-voice
