@@ -1,3 +1,0 @@
-#!/bin/bash
-
-pacman -S libvirt virt-manager edk2-ovmf bridge-utils gcc git make fakeroot sudo
