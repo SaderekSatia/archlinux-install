@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo pacman -S gdm gnome gnome-extra gnome-shell-extensions gnome-tweaks
-sudo pacman -S adapta-gtk-theme arc-gtk-theme arc-solid-gtk-theme arc-icon-theme breeze-gtk deepin-gtk-theme gnome-themes-extra materia-gtk-theme mate-themes
-sudo pacman -S blender celluloid gimp obs-studio firefox chromium libreoffice keybase telegram-desktop discord
-sudo pacman -S bash-completion neovim
