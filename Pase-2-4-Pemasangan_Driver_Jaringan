@@ -1,3 +1,0 @@
-#!/bin/bash
-
-pacman -S networkmanager network-manager-applet wpa_supplicant nfs-utils dnsutils dnsmasq ipset firewalld nss-mdns bluez bluez-utils aria2 openssh shadowsocks android-udev android-tools net-tools dialog
