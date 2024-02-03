@@ -1,9 +1,0 @@
-#!/bin/bash
-
-mkinitcpio -P
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Archlinux --removable
-
-/bin/echo -e "\e[1;32mAktifkan OS-Prober\e[0m\n"
-sleep 5
-nano /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
