@@ -16,7 +16,7 @@ submenu "System Maintenance" {
 	}
 
 	menuentry "Windows Bootable" --class windows --class os {
-		set root=(hd0,9)
+		set root=(hd1,gpt9)
 		insmod part_gpt
 		insmod ntfs
 		insmod chain

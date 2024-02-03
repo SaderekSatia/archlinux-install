@@ -1,10 +1,12 @@
 #!/bin/bash
 
-pacman -S cpupower
-systemctl enable cpupower
+pacman -S acpi_call-dkms cpupower
+#systemctl enable cpupower
 yay -S zenpower3-dkms
 yay -S asusctl
 systemctl enable asusd
+yay -S supergfxctl
+systemctl enable supergfxd.service
 yay -S lact
 systemctl enable lactd
 yay -S cpupower-gui
