@@ -6,7 +6,7 @@ pacstrap -K /mnt base base-devel linux-firmware linux-zen linux-zen-headers linu
 #linux-cachyos linux-cachyos-headers linux-cachyos-bore linux-cachyos-bore-headers
 
 genfstab -U /mnt >> /mnt/etc/fstab
-less /mnt/etc/fstab
+cat /mnt/etc/fstab
 
 cp -r /archlinux-install /mnt
 
