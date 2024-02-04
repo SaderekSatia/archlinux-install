@@ -1,13 +1,17 @@
 #!/bin/bash
 
 pacman -S acpi_call-dkms cpupower
-#systemctl enable cpupower
 yay -S zenpower3-dkms
+
 yay -S asusctl
 systemctl enable asusd
 yay -S supergfxctl
 systemctl enable supergfxd.service
-yay -S lact
-systemctl enable lactd
+
+#LACT sudah tersedia di Github
+#yay -S lact
+#systemctl enable lactd
+
 yay -S cpupower-gui
+#systemctl enable cpupower
 yay -S otpclient
