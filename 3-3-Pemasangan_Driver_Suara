@@ -2,3 +2,5 @@
 
 #pipewire-media-session <-- Jelek diganti wireplumber
 pacman -S alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-audio pipewire-jack wireplumber noise-suppression-for-voice
+
+/bin/echo -e "\e[1;32mSaya Sarankan untuk Reboot Sistem supaya Mengganti sistem yang sedang berjalan sekarang Dengan yang baru 5\e[0m"
