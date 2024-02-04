@@ -7,6 +7,8 @@
 /bin/echo -e "[liquorix]" >> /etc/pacman.conf
 /bin/echo -e "Server = https://liquorix.net/archlinux/\$repo/\$arch" >> /etc/pacman.conf
 
+cat /etc/pacman.conf
+
 pacman -Syu
 pacman -S archlinux-keyring
 
