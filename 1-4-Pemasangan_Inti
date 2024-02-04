@@ -1,7 +1,7 @@
 #!/bin/bash
 
 timedatectl
-pacstrap -K /mnt base base-devel linux-firmware linux-zen linux-zen-headers linux-lqx linux-lqx-headers alsa-firmware virt-firmware amd-ucode nano
+pacstrap -K /mnt base base-devel linux-firmware linux-zen linux-zen-headers alsa-firmware virt-firmware amd-ucode nano
 
 #linux-cachyos linux-cachyos-headers linux-cachyos-bore linux-cachyos-bore-headers
 
