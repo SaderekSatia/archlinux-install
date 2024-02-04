@@ -6,9 +6,10 @@ pacstrap -K /mnt base base-devel linux-firmware linux-zen linux-zen-headers linu
 #linux-cachyos linux-cachyos-headers linux-cachyos-bore linux-cachyos-bore-headers
 
 genfstab -U /mnt >> /mnt/etc/fstab
-cat /mnt/etc/fstab
 
 cp -r /archlinux-install /mnt
+
+cat /mnt/etc/fstab
 
 /bin/echo -e "\e[1;32mMemasuki ARCH-CHROOT Dalam 5..4..3..2..1..\e[0m"
 sleep 5
