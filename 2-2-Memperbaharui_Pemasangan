@@ -17,4 +17,4 @@ pacman -Syu
 pacman -S archlinux-keyring
 pacman -S linux-lqx linux-lqx-headers
 
-/bin/echo -e "\e[1;32mInstall Juga Kernel Cachyos Dari Partisi USER\e[0m"
+/bin/echo -e "\e[1;32mInstall Juga Kernel CachyOS Dari Partisi USER\e[0m"
