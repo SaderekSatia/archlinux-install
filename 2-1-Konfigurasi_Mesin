@@ -8,9 +8,21 @@ echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=us" >> /etc/vconsole.conf
 echo "FONT=tcvn8x16" >> /etc/vconsole.conf
 echo "anarki" >> /etc/hostname
+
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 anarki.localdomain anarki" >> /etc/hosts
+
+/bin/echo -e "\n" >> /etc/hosts
+echo "# Genshin logging servers (do not remove)" >> /etc/hosts
+echo "0.0.0.0 overseauspider.yuanshen.com" >> /etc/hosts
+echo "0.0.0.0 osuspider.yuanshen.com" >> /etc/hosts
+echo "0.0.0.0 ys-log-upload-os.hoyoverse.com" >> /etc/hosts
+
+/bin/echo -e "\n" >> /etc/hosts
+echo "0.0.0.0 log-upload.mihoyo.com" >> /etc/hosts
+echo "0.0.0.0 uspider.yuanshen.com" >> /etc/hosts
+echo "0.0.0.0 ys-log-upload.mihoyo.com" >> /etc/hosts
 
 #printf "\e[1;32mMasukan Kata Sandi ROOT\e[0m\n"
 /bin/echo -e "\e[1;32mMembuat Kata Sandi ROOT\e[0m"
