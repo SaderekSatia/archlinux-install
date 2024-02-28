@@ -2,10 +2,10 @@
 
 yay -S linux-firmware-git
 yay -S amd-zen-ucode-platomav
-yay -S mkinitcpio-firmware
 yay -S aic94xx-firmware
 yay -S wd719x-firmware
 yay -S upd72020x
+yay -S mkinitcpio-firmware
 
 mkinitcpio -P
 grub-mkconfig -o /boot/grub/grub.cfg
