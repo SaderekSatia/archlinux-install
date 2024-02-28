@@ -1,6 +1,6 @@
 #!/bin/bash
 
 #pipewire-media-session <-- Jelek diganti wireplumber
-pacman -S alsa-lib lib32-alsa-lib alsa-utils pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-audio pipewire-jack wireplumber noise-suppression-for-voice
+pacman -S alsa-lib lib32-alsa-lib libpulse lib32-libpulse pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-audio pipewire-jack lib32-pipewire-jack libavtp lib32-libavtp libsamplerate lib32-libsamplerate speexdsp lib32-speexdsp alsa-utils wireplumber noise-suppression-for-voice
 
 /bin/echo -e "\e[1;32mSaya Sarankan untuk Reboot supaya mengganti sistem yang sedang berjalan sekarang dengan Driver yang baru 5\e[0m"
