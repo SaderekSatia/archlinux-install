@@ -5,3 +5,4 @@ sudo pacman -S flac wavpack libvorbis lame libmad a52dec libmpcdec opencore-amr 
 sudo pacman -S aom dav1d rav1e svt-av1 libde265 libdv libmpeg2 schroedinger libtheora libvpx x264 x265 xvidcore
 sudo pacman -S ffmpeg gstreamer gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly libde265 gst-plugin-pipewire gstreamer-vaapi gst-plugin-va libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau
 sudo pacman -S unzip unrar p7zip
+sudo pacman -S bison flex valgrind byacc
