@@ -7,15 +7,44 @@
 /bin/echo -e "[liquorix]" >> /etc/pacman.conf
 /bin/echo -e "Server = https://liquorix.net/archlinux/\$repo/\$arch" >> /etc/pacman.conf
 
-/bin/echo -e "\e[1;32mSaya Sarankan Aktifkan Repository Multilib Dari Sini\e[0m"
+pacman-key --recv-keys F3B607488DB35A47 --keyserver keyserver.ubuntu.com
+pacman-key --lsign-key F3B607488DB35A47
+
+pacman -U 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-20240331-1-any.pkg.tar.zst' 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-mirrorlist-18-1-any.pkg.tar.zst' 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v3-mirrorlist-18-1-any.pkg.tar.zst' 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-v4-mirrorlist-6-1-any.pkg.tar.zst' 'https://mirror.cachyos.org/repo/x86_64/cachyos/pacman-6.1.0-5-x86_64.pkg.tar.zst'
+
+/bin/echo -e "\n" >> /etc/pacman.conf
+/bin/echo -e "[cachyos-v3]" >> /etc/pacman.conf
+/bin/echo -e "Include = /etc/pacman.d/cachyos-v3-mirrorlist" >> /etc/pacman.conf
+
+/bin/echo -e "\n" >> /etc/pacman.conf
+/bin/echo -e "[cachyos-core-v3]" >> /etc/pacman.conf
+/bin/echo -e "Include = /etc/pacman.d/cachyos-v3-mirrorlist" >> /etc/pacman.conf
+
+/bin/echo -e "\n" >> /etc/pacman.conf
+/bin/echo -e "[cachyos-extra-v3]" >> /etc/pacman.conf
+/bin/echo -e "Include = /etc/pacman.d/cachyos-v3-mirrorlist" >> /etc/pacman.conf
+
+/bin/echo -e "\n" >> /etc/pacman.conf
+/bin/echo -e "[cachyos]" >> /etc/pacman.conf
+/bin/echo -e "Include = /etc/pacman.d/cachyos-mirrorlist" >> /etc/pacman.conf
+
+cat /etc/pacman.conf
+
+/bin/echo -e "\e[1;32mRubah Top Level Repository Pacman 5..4..3..2..1..\e[0m"
+sleep 5
+
+/bin/echo -e "\e[1;32mDan Juga Saya Sarankan Aktifkan Repository Multilib Dari Sini\e[0m"
 sleep 3
-nano /etc/pacman.conf
+
+pacman -S vi
+
+vi /etc/pacman.conf
 
 cat /etc/pacman.conf
 
 pacman -Syu
 pacman -S archlinux-keyring
-pacman -S linux-lqx linux-lqx-headers
+# pacman -S linux-lqx linux-lqx-headers
 
-/bin/echo -e "\e[1;32mInstall Juga Kernel CachyOS Dari Partisi USER\e[0m"
-/bin/echo -e "\e[1;32m >> linux-cachyos linux-cachyos-headers linux-cachyos-bore linux-cachyos-bore-headers\e[0m"
+# /bin/echo -e "\e[1;32mInstall Juga Kernel CachyOS Dari Partisi USER\e[0m"
+# /bin/echo -e "\e[1;32m >> linux-cachyos linux-cachyos-headers linux-cachyos-bore linux-cachyos-bore-headers\e[0m"
