@@ -42,7 +42,8 @@ vi /etc/pacman.conf
 
 cat /etc/pacman.conf
 
-pacman -Syu
+pacman -Sy
+pacman -Suuy
 pacman -S archlinux-keyring
 # pacman -S linux-lqx linux-lqx-headers
 
