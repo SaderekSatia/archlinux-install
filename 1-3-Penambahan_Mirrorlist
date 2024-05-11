@@ -52,6 +52,8 @@ sleep 5
 
 pacman -S vi
 vi /etc/pacman.conf
+cat /etc/pacman.conf
+sleep 5
 
 
 /bin/echo -e "\e[1;32mRubah Baris Ini Ke CARCH=x86_64_v3\e[0m"
@@ -60,6 +62,8 @@ sleep 3
 sleep 5
 
 vi /etc/makepkg.conf
+cat /etc/makepkg.conf
+sleep 5
 
 
 #pacman -Syu
