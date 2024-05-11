@@ -67,7 +67,12 @@ sleep 5
 
 pacman -Sy
 pacman -S archlinux-keyring
-pacman -Suuy
+
+/bin/echo -e "\e[1;32mJangan Terlewat Menginstall ALHP Keyring Dan Mirrorlist\e[0m"
+sleep 3
+/bin/echo -e "\e[1;32mDan jalankan pacman -Suuy\e[0m"
+
+# pacman -Suuy
 # pacman -S linux-lqx linux-lqx-headers
 
 # /bin/echo -e "\e[1;32mInstall Juga Kernel CachyOS Dari Partisi USER\e[0m"
