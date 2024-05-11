@@ -28,6 +28,7 @@ pacman -U 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-202403
 /bin/echo -e "[cachyos]" >> /etc/pacman.conf
 /bin/echo -e "Include = /etc/pacman.d/cachyos-mirrorlist" >> /etc/pacman.conf
 
+
 /bin/echo -e "\e[1;32mJangan Terlewat Menginstall ALHP Keyring Dan Mirrorlist 5..4..3..2..1..\e[0m"
 sleep 5
 
