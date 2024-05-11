@@ -53,6 +53,15 @@ sleep 5
 pacman -S vi
 vi /etc/pacman.conf
 
+
+/bin/echo -e "\e[1;32mRubah Baris Ini Ke CARCH=x86_64_v3\e[0m"
+sleep 3
+/bin/echo -e "\e[1;32mDan CFLAGS=-march=x86-64-v3 -mtune=generic ...\e[0m"
+sleep 5
+
+vi /etc/makepkg.conf
+
+
 #pacman -Syu
 pacman -S archlinux-keyring
 
