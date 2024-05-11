@@ -66,8 +66,8 @@ cat /etc/makepkg.conf
 sleep 5
 
 pacman -Sy
-pacman -Suuy
 pacman -S archlinux-keyring
+pacman -Suuy
 # pacman -S linux-lqx linux-lqx-headers
 
 # /bin/echo -e "\e[1;32mInstall Juga Kernel CachyOS Dari Partisi USER\e[0m"
