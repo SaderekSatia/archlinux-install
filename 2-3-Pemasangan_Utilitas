@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # pacman -S acpid acpi acpi_call
-pacman -S e2fsprogs btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g mtools gvfs gvfs-smb efivar efitools efibootmgr grub grub-btrfs os-prober util-linux
+pacman -S e2fsprogs btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g mtools gvfs gvfs-smb efivar efitools efibootmgr grub grub-btrfs os-prober util-linux xfsprogs xfsdump
 pacman -S libvirt virt-manager edk2-ovmf bridge-utils gcc git make fakeroot sudo
