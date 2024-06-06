@@ -4,7 +4,9 @@ timedatectl
 
 # pacstrap -K /mnt base linux-zen linux-zen-headers linux-firmware linux-firmware-bnx2x linux-firmware-liquidio linux-firmware-marvell linux-firmware-mellanox linux-firmware-nfp linux-firmware-qcom linux-firmware-qlogic linux-firmware-whence alsa-firmware virt-firmware amd-ucode nano vi
 
-pacstrap -K /mnt base linux-cachyos linux-cachyos-headers scx-scheds linux-firmware-git linux-firmware-bnx2x-git linux-firmware-liquidio-git linux-firmware-marvell-git linux-firmware-mellanox-git linux-firmware-nfp-git linux-firmware-qcom-git linux-firmware-qlogic-git linux-firmware-whence-git alsa-firmware virt-firmware amd-ucode-git nano vi
+# pacstrap -K /mnt base linux-cachyos linux-cachyos-headers scx-scheds linux-firmware-git linux-firmware-bnx2x-git linux-firmware-liquidio-git linux-firmware-marvell-git linux-firmware-mellanox-git linux-firmware-nfp-git linux-firmware-qcom-git linux-firmware-qlogic-git linux-firmware-whence-git alsa-firmware virt-firmware amd-ucode-git nano vi
+
+pacstrap -K /mnt base linux-cachyos linux-cachyos-headers scx-scheds linux-firmware linux-firmware-bnx2x linux-firmware-liquidio linux-firmware-marvell linux-firmware-mellanox linux-firmware-nfp linux-firmware-qcom linux-firmware-qlogic linux-firmware-whence alsa-firmware virt-firmware amd-ucode nano vi
 
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
