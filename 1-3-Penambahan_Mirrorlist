@@ -1,11 +1,11 @@
 #!/bin/bash
 
-/bin/echo -e "[mesa-git]" >> /etc/pacman.conf
-/bin/echo -e "Server = https://pkgbuild.com/~lcarlier/\$repo/\$arch" >> /etc/pacman.conf
+#/bin/echo -e "[mesa-git]" >> /etc/pacman.conf
+#/bin/echo -e "Server = https://pkgbuild.com/~lcarlier/\$repo/\$arch" >> /etc/pacman.conf
 
-/bin/echo -e "\n" >> /etc/pacman.conf
-/bin/echo -e "[liquorix]" >> /etc/pacman.conf
-/bin/echo -e "Server = https://liquorix.net/archlinux/\$repo/\$arch" >> /etc/pacman.conf
+#/bin/echo -e "\n" >> /etc/pacman.conf
+#/bin/echo -e "[liquorix]" >> /etc/pacman.conf
+#/bin/echo -e "Server = https://liquorix.net/archlinux/\$repo/\$arch" >> /etc/pacman.conf
 
 pacman-key --recv-keys F3B607488DB35A47 --keyserver keyserver.ubuntu.com
 pacman-key --lsign-key F3B607488DB35A47
@@ -29,20 +29,20 @@ pacman -U 'https://mirror.cachyos.org/repo/x86_64/cachyos/cachyos-keyring-202403
 /bin/echo -e "Include = /etc/pacman.d/cachyos-mirrorlist" >> /etc/pacman.conf
 
 
-/bin/echo -e "\e[1;32mJangan Terlewat Menginstall ALHP Keyring Dan Mirrorlist 5..4..3..2..1..\e[0m"
-sleep 5
+#/bin/echo -e "\e[1;32mJangan Terlewat Menginstall ALHP Keyring Dan Mirrorlist 5..4..3..2..1..\e[0m"
+#sleep 5
 
-/bin/echo -e "\n" >> /etc/pacman.conf
-/bin/echo -e "[core-x86-64-v3]" >> /etc/pacman.conf
-/bin/echo -e "Include = /etc/pacman.d/alhp-mirrorlist" >> /etc/pacman.conf
+#/bin/echo -e "\n" >> /etc/pacman.conf
+#/bin/echo -e "[core-x86-64-v3]" >> /etc/pacman.conf
+#/bin/echo -e "Include = /etc/pacman.d/alhp-mirrorlist" >> /etc/pacman.conf
 
-/bin/echo -e "\n" >> /etc/pacman.conf
-/bin/echo -e "[extra-x86-64-v3]" >> /etc/pacman.conf
-/bin/echo -e "Include = /etc/pacman.d/alhp-mirrorlist" >> /etc/pacman.conf
+#/bin/echo -e "\n" >> /etc/pacman.conf
+#/bin/echo -e "[extra-x86-64-v3]" >> /etc/pacman.conf
+#/bin/echo -e "Include = /etc/pacman.d/alhp-mirrorlist" >> /etc/pacman.conf
 
-/bin/echo -e "\n" >> /etc/pacman.conf
-/bin/echo -e "[multilib-x86-64-v3]" >> /etc/pacman.conf
-/bin/echo -e "Include = /etc/pacman.d/alhp-mirrorlist" >> /etc/pacman.conf
+#/bin/echo -e "\n" >> /etc/pacman.conf
+#/bin/echo -e "[multilib-x86-64-v3]" >> /etc/pacman.conf
+3/bin/echo -e "Include = /etc/pacman.d/alhp-mirrorlist" >> /etc/pacman.conf
 
 
 cat /etc/pacman.conf
